@@ -9,14 +9,14 @@ import java.util.ArrayList;
 @SuppressWarnings("rawtypes")
 public class RuleConfigurationTemplate {
 
-	private RuleTemplate ruleTemplates;
+	private RuleTemplate ruleTemplate;
 
 	public RuleTemplate getRuleTemplate() {
-		return ruleTemplates;
+		return ruleTemplate;
 	}
 
 	public void setRuleTemplate(RuleTemplate ruleTemplate) {
-		this.ruleTemplates = ruleTemplate;
+		this.ruleTemplate = ruleTemplate;
 	}
 
 	public static class RuleTemplate {
