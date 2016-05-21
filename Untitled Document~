@@ -1,0 +1,142 @@
+package com.jinigram.intelligentcallrouting.service.beans;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.jinigram.intelligentcallrouting.beans.CallRequest;
+
+
+/*Response class for intelligent call routing webservices*/
+@XmlRootElement
+public class Response {
+
+	private String responseMessage;
+	private String responseCode;
+	private String responseValue;
+	private AgentInfo agentInfo;
+	private List<String> messageList;
+
+	public Response()
+	{
+		agentInfo=new AgentInfo();
+		messageList = new ArrayList<String>();
+	}
+	public String getResponseMessage() {
+		return responseMessage;
+	}
+
+	public void setResponseMessage(String responseMessage) {
+		this.responseMessage = responseMessage;
+	}
+
+	public String getResponseCode() {
+		return responseCode;
+	}
+
+	public void setResponseCode(String responseCode) {
+		this.responseCode = responseCode;
+	}
+
+	public String getResponseValue() {
+		return responseValue;
+	}
+
+	public void setResponseValue(String responseValue) {
+		this.responseValue = responseValue;
+	}
+
+	
+	public AgentInfo getAgentInfo() {
+		return agentInfo;
+	}
+
+	public void setAgentInfo(AgentInfo agentInfo) {
+		this.agentInfo = agentInfo;
+	}
+	public List<String> getMessageList() {
+		return messageList;
+	}
+
+	public void setMessageList(List<String> messageList) {
+		this.messageList = messageList;
+	}
+	
+
+	public static class AgentInfo {
+		
+		private String agentName;
+		private String agentId;
+		private String agentImage;
+		private String team;
+		private CallRequest lastInteraction=null;
+		private int no_of_interactions=0;
+		
+		public String getAgentName() {
+			return agentName;
+		}
+
+		public void setAgentName(String agentName) {
+			this.agentName = agentName;
+		}
+
+		public String getAgentImage() {
+			return agentImage;
+		}
+
+		public void setAgentImage(String agentImage) {
+			this.agentImage = agentImage;
+		}
+
+		public String getTeam() {
+			return team;
+		}
+
+		public void setTeam(String team) {
+			this.team = team;
+		}
+
+		public CallRequest getLastInteraction() {
+			return lastInteraction;
+		}
+
+		public void setLastInteraction(CallRequest lastInteraction) {
+			this.lastInteraction = lastInteraction;
+		}
+
+		public int getNo_of_interactions() {
+			return no_of_interactions;
+		}
+
+		public void setNo_of_interactions(int no_of_interactions) {
+			this.no_of_interactions = no_of_interactions;
+		}
+
+		
+		public String getAgentId() {
+			return agentId;
+		}
+
+		public void setAgentId(String agentId) {
+			this.agentId = agentId;
+		}
+
+		@Override
+		public String toString() {
+			return "[AgentName=" + agentName + ", AgentId=" + agentId
+					+ ", AgentImage=" + agentImage + ", Team=" + team
+					+ ", LastInteraction=" + lastInteraction
+					+ ", No_of_interactions=" + no_of_interactions + "]";
+		}
+	}
+	@Override
+	public String toString() {
+		return "Response [ResponseMessage=" + responseMessage
+				+ ", ResponseCode=" + responseCode + ", ResponseValue="
+				+ responseValue + ", AgentInfo=" + agentInfo + ", MessageList="
+				+ messageList + "]";
+	}
+
+}
+
