@@ -9,6 +9,7 @@ import java.util.ArrayList;
 @SuppressWarnings("rawtypes")
 public class RuleConfigurationTemplate {
 
+<<<<<<< HEAD
 	private RuleTemplate ruleTemplates;
 
 	public RuleTemplate getRuleTemplate() {
@@ -19,6 +20,9 @@ public class RuleConfigurationTemplate {
 		this.ruleTemplates = ruleTemplate;
 	}
 
+=======
+	
+>>>>>>> 37c5caf51eefce056d30199c89ca3b9df01c831a
 	public static class RuleTemplate {
 
 	
@@ -32,53 +36,7 @@ public class RuleConfigurationTemplate {
 		}
 
 		public List<RulesObject> getRuleList() {
-			return ruleList;
-		}
-
-		public void setRuleList(List<RulesObject> ruleList) {
-			this.ruleList = ruleList;
-		}
-
-		public static class ValueObject {
-			private String voName;
-			private String voType;
-			private String voClass;
-
-			public String getVoName() {
-				return voName;
-			}
-
-			public void setVoName(String voName) {
-				this.voName = voName;
-			}
-
-			public String getVoType() {
-				return voType;
-			}
-
-			public void setVoType(String voType) {
-				this.voType = voType;
-			}
-
-			public String getVoClass() {
-				return voClass;
-			}
-
-			public void setVoClass(String voClass) {
-				this.voClass = voClass;
-			}
-
-		}
-
-		public static class RulesObject {
-			private int ruleId;
-			private String ruleDescription;
-			private String ruleCondition;
-			private Result success;
-			private Result failure;
-
-			public Result getSuccess() {
-				return success;
+	
 			}
 
 			public void setSuccess(Result success) {
