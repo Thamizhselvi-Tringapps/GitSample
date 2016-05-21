@@ -21,8 +21,7 @@ public class RuleConfigurationTemplate {
 
 	public static class RuleTemplate {
 
-		private List<ValueObject> valueObject;
-		private List<RulesObject> ruleList;
+	
 
 		public List<ValueObject> getValueObject() {
 			return valueObject;
